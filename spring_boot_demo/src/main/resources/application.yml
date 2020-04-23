@@ -1,0 +1,6 @@
+app:
+  datasource:
+    jdbc-url: jdbc:postgresql://localhost:5432/springtestdb
+    username: postgres
+    password: klarinet1998
+    pool-size: 30
