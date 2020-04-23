@@ -1,5 +1,5 @@
 app:
-  datasource:
+  postgres:
     jdbc-url: jdbc:postgresql://localhost:5432/springtestdb
     username: postgres
     password: klarinet1998

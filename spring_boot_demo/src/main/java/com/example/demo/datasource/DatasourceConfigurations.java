@@ -5,13 +5,15 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
-public class PostgresDatasource {
+public class DatasourceConfigurations {
 
     @Bean
-    @ConfigurationProperties("app.datasource")
-    public HikariDataSource hikariDataSource() {
+    @Primary
+    @ConfigurationProperties("app.postgres")
+    public HikariDataSource postgreDatasource() {
         return DataSourceBuilder
                 .create()
                 .type(HikariDataSource.class)
